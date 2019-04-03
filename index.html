@@ -15,9 +15,9 @@
   
   
   window.onload = function() {
-    var gadget2 = new cloudprint.Gadget();
+    var gadget = new cloudprint.Gadget();
     gadget.setPrintButton(
-        cloudprint.Gadget.createDefaultPrintButton("print_button_container2")); // div id to contain the button
+        cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
     gadget.setPrintDocumentgadget.setPrintDocument("url", "Google Drive Test Page", "https://kyuuuw.github.io/BobaPrinterTest/bobatest.pdf");
   }
   
@@ -31,7 +31,7 @@
 -->
   
 <p> 내 구글 드라이브의 파일 인쇄 </p>
-<div id="print_button_container2"></div>
+<div id="print_button_container"></div>
 
   
  
