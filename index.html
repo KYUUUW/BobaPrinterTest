@@ -20,7 +20,7 @@
     var gadget = new cloudprint.Gadget();
     gadget.setPrintButton(
         cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
-    gadget.setPrintDocument("url", "Test Page", url_link[select]));
+    gadget.setPrintDocument("url", "Test Page", url_link[select]);
   }
   
 </script>
@@ -29,8 +29,10 @@
 
 <body>
   <h3>Sample provided by google</h3>
-  <button type="button" value="Google Test Page" onclick='sel_print(0)'></button>
-  <button type="button" value="GitHub Test Page" onclick='sel_print(1)'></button>
+  <button type="button" value="Google Test Page" onclick="sel_print(0)">Google Test Page</button>
+  <button type="button" value="GitHub Test Page" onclick="sel_print(1)">GitHub Test Page</button>
+  <br/>
+  
   <div id="print_button_container"></div>
   
   <br/>
