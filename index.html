@@ -9,29 +9,29 @@
 <script src="https://www.google.com/cloudprint/client/cpgadget.js">
 </script>
 <script>
+  var url_link = ["https://www.google.com/landing/cloudprint/testpage.pdf", "https://kyuuuw.github.io/BobaPrinterTest/test.html"];
+  var select = 0;
+  
+  function sel_print(s) {
+    select = s;
+  }
+  
   window.onload = function() {
     var gadget = new cloudprint.Gadget();
     gadget.setPrintButton(
         cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
-    gadget.setPrintDocument("url", "Test Page", "https://www.google.com/landing/cloudprint/testpage.pdf");
+    gadget.setPrintDocument("url", "Test Page", url_link[select]));
   }
   
-    window.onload = function() {
-    var gadget = new cloudprint.Gadget();
-    gadget.setPrintButton(
-        cloudprint.Gadget.createDefaultPrintButton("print_button_container2")); // div id to contain the button
-    gadget.setPrintDocument("url", "Test Page2", "https://github.com/KYUUUW/BobaPrinterTest/raw/master/bobatest.pdf");
-  }
 </script>
 
 </head>
 
 <body>
   <h3>Sample provided by google</h3>
+  <button type="button" value="Google Test Page" onclick='sel_print(0)'></button>
+  <button type="button" value="GitHub Test Page" onclick='sel_print(1)'></button>
   <div id="print_button_container"></div>
-  
-  <h3>PDF Provided by Gihub Repo</h3>
-  <div id="print_button_container2"></div>
   
   <br/>
   <p>V19040844</p>
