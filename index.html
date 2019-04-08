@@ -9,9 +9,11 @@
 <script src="https://www.google.com/cloudprint/client/cpgadget.js">
 </script>
 <script>
+  // 접근 할 url 들 리스트로 정리
   var url_link = ["https://www.google.com/landing/cloudprint/testpage.pdf", "https://kyuuuw.github.io/BobaPrinterTest/test.html"];
-  var select = 0;
+  var select = 0; // 리스트 인덱스
   
+  // 어떤 링크 택할것인지 설정
   function sel_print(s) {
     select = s;
   }
@@ -36,7 +38,23 @@
   <div id="print_button_container"></div>
   
   <br/>
-  <p>V19040909</p>
+  <hr/>
+  <h5>V19040918</h5>
+  <h6>개발 노트</h6>
+  <ul>
+    <li>0401 : 구글에서 제공하는 테스트 페이지 인쇄</li>
+    <li>0409 : 두가지 프린트물 중에 하나 설정해 인쇄</li>
+  </ul>
+  
+  <h6>구현할 기술
+  <ol>
+    <li>더 다양한 파일 포멧 시도</li>
+    <li>구글 드라이브의 파일 접근 및 인쇄</li>
+    <li>구글 드라이브에 업로드</li>
+    <li>구글 드라이브에 업로드 한 파일 삭제</li>
+    <li>비지원 파일 pdf 변환 메소드 찾기</li>
+  </ol>
+  
   
 </body>
 
