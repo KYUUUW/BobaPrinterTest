@@ -15,13 +15,26 @@
         cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
     gadget.setPrintDocument("url", "Test Page", "https://www.google.com/landing/cloudprint/testpage.pdf");
   }
+  
+    window.onload = function() {
+    var gadget = new cloudprint.Gadget();
+    gadget.setPrintButton(
+        cloudprint.Gadget.createDefaultPrintButton("print_button_container2")); // div id to contain the button
+    gadget.setPrintDocument("url", "Test Page2", "https://github.com/KYUUUW/BobaPrinterTest/raw/master/bobatest.pdf");
+  }
 </script>
 
 </head>
 
 <body>
-
-<div id="print_button_container"></div>
+  <h3>Sample provided by google</h3>
+  <div id="print_button_container"></div>
+  
+  <h3>PDF Provided by Gihub Repo</h3>
+  <div id="print_button_container2"></div>
+  
+  <br/>
+  <p>V19040844</p>
   
 </body>
 
