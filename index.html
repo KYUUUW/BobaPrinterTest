@@ -10,12 +10,18 @@
 </script>
 <script>
   // 접근 할 url 들 리스트로 정리
-  var url_link = ["https://www.google.com/landing/cloudprint/testpage.pdf", "https://kyuuuw.github.io/BobaPrinterTest/test.html"];
+  var url_link = ["https://www.google.com/landing/cloudprint/testpage.pdf", "https://kyuuuw.github.io/BobaPrinterTest/test.html", ""];
   var select = 0; // 리스트 인덱스
   
   // 어떤 링크 택할것인지 설정
   function sel_print(s) {
     select = s;
+  }
+  
+  function set_manual_url() {
+    url = document.getElementById("prints_url").value;
+    url_link[2] = url;
+    select = 2;
   }
   
   window.onload = function() {
@@ -30,20 +36,25 @@
 </head>
 
 <body>
-  <h3>Sample provided by google</h3>
+  <h3>Boba Platform TestPage</h3>
+  <h5>Setting Buttons</h5>
   <button type="button" value="Google Test Page" onclick="sel_print(0)">Google Test Page</button>
   <button type="button" value="GitHub Test Page" onclick="sel_print(1)">GitHub Test Page</button>
+  <br/>
+  <input type="text" id="prints_url" width="500px"></input>
+  <button type="button" value="Manual Page" onclick="set_manual_url()">Manual Page</button>
   <br/>
   <p>Do Print!</p>
   <div id="print_button_container"></div>
   
   <br/>
   <hr/>
-  <h5>V19040918</h5>
+  <h5>V190409.1730</h5>
   <h6>개발 노트</h6>
   <ul>
     <li>0401 : 구글에서 제공하는 테스트 페이지 인쇄</li>
-    <li>0409 : 두가지 프린트물 중에 하나 설정해 인쇄</li>
+    <li>0408 : 두가지 프린트물 중에 하나 설정해 인쇄</li>
+    <li>0409 : 원하는 링크의 인쇄물 인쇄 할 수 있도록 함</li>
   </ul>
   
   <h6>구현할 기술
