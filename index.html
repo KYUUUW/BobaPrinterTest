@@ -10,7 +10,7 @@
 </script>
 <script>
   // 접근 할 url 들 리스트로 정리
-  var url_link = ["https://www.google.com/landing/cloudprint/testpage.pdf", "https://kyuuuw.github.io/BobaPrinterTest/test.html", ""];
+  var url_link = ["https://www.google.com/landing/cloudprint/testpage.pdf", "https://firebasestorage.googleapis.com/v0/b/kyuwon-storage.appspot.com/o/19_06_%EC%B4%88%EA%B8%B0%EC%B0%BD%EC%97%85%EC%9E%90_%EA%B0%9C%EB%B0%9C%EA%B4%80%EB%A0%A8_%EB%8C%80%EB%B3%B8.docx?alt=media&token=859d375b-f2ac-44d7-8a52-20ea4815b7a9", ""];
   var select = 0; // 리스트 인덱스
   
   // 어떤 링크 택할것인지 설정
@@ -39,7 +39,7 @@
   <h3>Boba Platform TestPage</h3>
   <h5>Setting Buttons</h5>
   <button type="button" value="Google Test Page" onclick="sel_print(0)">Google Test Page</button>
-  <button type="button" value="GitHub Test Page" onclick="sel_print(1)">GitHub Test Page</button>
+  <button type="button" value="GitHub Test Page" onclick="sel_print(1)">Firebase .docx Test Page</button>
   <br/>
   <input type="text" id="prints_url" width="1000px"></input>
   <button type="button" value="Manual Page" onclick="set_manual_url()">Manual Page</button>
